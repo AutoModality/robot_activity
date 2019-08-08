@@ -1,0 +1,3 @@
+<launch>
+  <test test-name="state_transition_test" pkg="robot_activity" type="state_transition_test" />
+</launch>

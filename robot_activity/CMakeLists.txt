@@ -31,6 +31,7 @@ add_library(robot_activity
   src/managed_robot_activity.cpp
   src/resource/managed_resource.cpp
   src/resource/resource_manager.cpp
+  src/functional_robot_activity.cpp
 )
 add_dependencies(robot_activity ${catkin_EXPORTED_TARGETS})
 target_link_libraries(robot_activity ${catkin_LIBRARIES})
@@ -70,6 +71,11 @@ if(CATKIN_ENABLE_TESTING)
   target_link_libraries(any_robot_activity robot_activity ${catkin_LIBRARIES})
   add_rostest(test/heartbeat.test)
 
+  # newest
+  add_rostest_gtest(state_transition_test test/state_transition.test test/test_transitions.cpp)
+  add_dependencies(state_transition_test ${catkin_EXPORTED_TARGETS})
+  target_link_libraries(state_transition_test robot_activity ${catkin_LIBRARIES})
+  
   roslint_add_test()
 
 endif()
