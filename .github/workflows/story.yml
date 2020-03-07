@@ -1,1 +1,19 @@
-/home/jdamon/Projects/machine_learning/.github/workflows/story.yml
+name: Story Development
+
+on:
+  push:
+    branches-ignore:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clean Workspace
+        uses: AutoModality/action-clean@v1.0.1
+      - uses: actions/checkout@v2
+      - name: Package
+        uses: AutoModality/action-package-debian-ros@v1.3.2
+        with:
+          dev-repo-entitlement: ${{ secrets.CLOUDSMITH_READ_DEV_ENTITLEMENT }}
+          release-repo-entitlement: ${{ secrets.CLOUDSMITH_READ_RELEASE_ENTITLEMENT }}
+      
