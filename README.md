@@ -1,6 +1,7 @@
 # robot_activity [![Build Status](https://travis-ci.org/snt-robotics/robot_activity.svg?branch=master)](https://travis-ci.org/snt-robotics/robot_activity)
 Copyright (C) 2018 - Maciej Żurad, University of Luxembourg
 
+
 Find more documentation at [http://wiki.ros.org/robot_activity](http://wiki.ros.org/robot_activity)
 
 
