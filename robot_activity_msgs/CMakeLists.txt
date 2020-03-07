@@ -13,3 +13,9 @@ add_message_files(
 generate_messages(DEPENDENCIES std_msgs)
 
 catkin_package(CATKIN_DEPENDS message_runtime std_msgs)
+
+if (EXISTS include/${PROJECT_NAME})
+install(DIRECTORY include/${PROJECT_NAME}
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
+endif()
+

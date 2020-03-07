@@ -1,0 +1,13 @@
+Source: ros-kinetic-am-robot-activity
+Section: misc
+Priority: optional
+Maintainer: support <support@automodality.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-roscpp, ros-kinetic-rospy
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-am-robot-activity
+Replaces: ros-kinetic-robot-activity , ros-kinetic-robot-actvity-msgs, ros-kinetic-robot-activity-tutorials
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-roscpp, ros-kinetic-rospy
+Description: Tell us why this exists
