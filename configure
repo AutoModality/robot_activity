@@ -1,0 +1,19 @@
+#!/bin/bash
+PACKAGE=ros-kinetic-am-robot-activity
+source /opt/ros/kinetic/setup.bash
+echo "We are $(pwd)"
+CURDIR=$(readlink -f $(pwd))
+mkdir -p catkin_ws/src/${PACKAGE}
+WORKSPACE=$(readlink -f ./catkin_ws)
+echo "AM_PLATFORM is ${AM_PLATFORM}"
+if [[ ! -f package.xml ]]; then
+    echo "package.xml is REQUIRED"
+    exit 1
+fi
+
+cp -r -p robot_activity_tutorials robot_activity_msgs robot_activity catkin_ws/src/${PACKAGE}
+cd catkin_ws
+catkin init --workspace .
+echo "PWD: $(pwd)"
+catkin config --install
+
