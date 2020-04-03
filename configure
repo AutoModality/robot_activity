@@ -1,6 +1,6 @@
 #!/bin/bash
-PACKAGE=ros-kinetic-am-robot-activity
-source /opt/ros/kinetic/setup.bash
+PACKAGE=ros-melodic-am-robot-activity
+source /opt/ros/melodic/setup.bash
 echo "We are $(pwd)"
 CURDIR=$(readlink -f $(pwd))
 mkdir -p catkin_ws/src/${PACKAGE}
