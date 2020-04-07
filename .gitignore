@@ -2,7 +2,7 @@ doc
 .DS_Store
 ._.*
 *~
-debian/ros-kinetic-*
+debian/ros-melodic-*
 debian/files
 debian/*stamp
 catkin_ws
